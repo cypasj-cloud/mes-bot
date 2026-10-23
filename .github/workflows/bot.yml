@@ -1,0 +1,46 @@
+name: MES botas
+
+on:
+  schedule:
+    - cron: "*/15 13-21 * * 1-5"
+    - cron: "17 9 * * 6"
+  workflow_dispatch:
+    inputs:
+      review:
+        description: "Paleisti ir savaitės apžvalgą"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mes-bot
+  cancel-in-progress: false
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Įdiegti priedus
+        run: pip install -r requirements.txt
+      - name: Savaitės apžvalga
+        if: github.event.schedule == '17 9 * * 6' || inputs.review
+        run: python review.py
+      - name: Boto žingsnis
+        run: python run_once.py
+      - name: Išsaugoti būseną
+        run: |
+          git config user.name "mes-bot"
+          git config user.email "mes-bot@users.noreply.github.com"
+          git add data docs/data
+          if git diff --cached --quiet; then echo "Pakeitimų nėra"; exit 0; fi
+          git commit -m "Boto būsena $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git pull --rebase
+          git push
