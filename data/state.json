@@ -1,8 +1,0 @@
-{
-  "balance": 10000.0,
-  "position": null,
-  "weights": {
-    "news": 0.5,
-    "chart": 0.5
-  }
-}
