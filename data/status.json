@@ -1,0 +1,18 @@
+{
+  "time": "2026-10-23T18:00:00+00:00",
+  "price": 7671.0,
+  "ema_fast": 7673.073837301547,
+  "ema_slow": 7676.473543738512,
+  "ema_trend": 7683.0588832547155,
+  "position": null,
+  "open_pnl": 0.0,
+  "balance": 10000.0,
+  "weights": {
+    "news": 0.5,
+    "chart": 0.5
+  },
+  "news_score": 0.0,
+  "day_pnl": 0.0,
+  "settings": "EMA 15min | JAV sesija | su trendu | SL 10 / TP 20",
+  "events": []
+}
