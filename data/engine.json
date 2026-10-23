@@ -1,0 +1,19 @@
+{
+ "day": null,
+ "day_pnl": 0.0,
+ "day_trades": 0,
+ "news_score": 0.0,
+ "events": [],
+ "orb": {
+  "day": null,
+  "hi": null,
+  "lo": null,
+  "traded": false
+ },
+ "mom": {
+  "prev_close": null,
+  "day_open": null,
+  "ret": null
+ },
+ "last_bar": "2026-10-23T18:25:00+00:00"
+}
