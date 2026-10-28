@@ -69,9 +69,14 @@ class Params:
 LIVE = Params(strategy="meanrev", timeframe=5, trend_filter=False, z_entry=3.0, stop_pts=8.0)
 
 # Kandidatai, iš kurių savaitės apžvalga renkasi (žr. review.py)
+_MR = dict(strategy="meanrev", timeframe=5, trend_filter=False)
 CANDIDATES = {
     "Grįžimas z≥3": LIVE,
-    "Grįžimas z≥3.5": Params(strategy="meanrev", timeframe=5, trend_filter=False, z_entry=3.5, stop_pts=8.0),
+    "Grįžimas z≥2.5": Params(**_MR, z_entry=2.5, stop_pts=8.0),
+    "Grįžimas z≥3.5": Params(**_MR, z_entry=3.5, stop_pts=8.0),
+    "Grįžimas z≥3 SL6": Params(**_MR, z_entry=3.0, stop_pts=6.0),
+    "Grįžimas z≥3 SL12": Params(**_MR, z_entry=3.0, stop_pts=12.0),
+    "Grįžimas z≥3 15min": Params(**{**_MR, "timeframe": 15}, z_entry=3.0, stop_pts=10.0),
     "EMA 15 min": Params(strategy="ema", timeframe=15, stop_pts=10.0, target_pts=20.0),
     "ORB 15 min": Params(strategy="orb", timeframe=5, orb_minutes=15, orb_target_r=2.0),
     "Momentum 0.2%": Params(strategy="momentum", timeframe=5, trend_filter=False, mom_min=0.002, stop_pts=10.0),

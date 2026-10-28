@@ -10,7 +10,7 @@ from dataclasses import replace
 
 import config
 from config import Params
-from data_feed import SimFeed, YahooFeed, resample
+from data_feed import DatabentoHistory, SimFeed, YahooFeed, resample
 from engine import Engine
 from paper_broker import PaperBroker
 
@@ -63,12 +63,20 @@ def stats(trades, bars):
     }
 
 
-def load(sim: bool):
-    """Grąžina {timeframe: žvakės}."""
+def load(sim: bool, days: int = 160):
+    """Grąžina {timeframe: žvakės}. Jei yra DATABENTO_API_KEY – ~5 mėn. tikrų MES duomenų."""
     if sim:
         f = SimFeed(seed=42)
         one = f.get_bars(40 * 23 * 60, timeframe=1)
         return {1: one[-7 * 23 * 60:], 5: resample(one, 5), 15: resample(one, 15)}
+    dbn = DatabentoHistory()
+    if dbn.available():
+        try:
+            one = dbn.get_bars(days, timeframe=1)
+            print(f"Databento: {len(one)} minučių žvakių, {one[0].time:%Y-%m-%d} – {one[-1].time:%Y-%m-%d}")
+            return {1: one[-7 * 23 * 60:], 5: resample(one, 5), 15: resample(one, 15)}
+        except Exception as e:
+            print(f"⚠ Databento nepavyko ({e}) – naudoju Yahoo (60 d.)")
     feed = YahooFeed()
     print("Siunčiu duomenis iš Yahoo (1 min – 7 d., 5 min – 60 d.)...")
     one = feed.get_bars(period="7d", timeframe=1)

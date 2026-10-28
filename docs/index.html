@@ -945,7 +945,7 @@ function renderUI() {
 function renderReview() {
   const rv = S && S.review, el = $('review');
   if (!rv || !rv.table) { el.innerHTML = '<div class="empty">Pirmoji savaitės apžvalga bus šeštadienį. Beždžionės išbandys visas strategijas su paskutinių 60 dienų duomenimis ir pasirinks geriausią.</div>'; return; }
-  el.innerHTML = `<div class="cal-detail"><div>${rv.lesson}</div></div><div class="tbl"><table><thead><tr><th>Strategija</th><th>Sand.</th><th>Laim.</th><th>PF</th><th>P&L</th><th>Pusės</th><th>Testas</th></tr></thead><tbody>${rv.table.map(r => `<tr><td>${r.name}${r.name === S.strategy ? ' ★' : ''}</td><td>${r.n}</td><td>${Math.round(r.win * 100)} %</td><td>${r.pf == null ? '∞' : r.pf.toFixed(2)}</td><td class="${cls(r.total)}">${fmtSE(r.total)}</td><td>${fmtSE(r.h1)} / ${fmtSE(r.h2)}</td><td>${r.ok ? '✅' : '—'}</td></tr>`).join('')}</tbody></table></div>`;
+  el.innerHTML = `<div class="cal-detail"><div>${rv.lesson}</div></div><div class="tbl"><table><thead><tr><th>Strategija</th><th>Sand.</th><th>Laim.</th><th>PF</th><th>Mokymasis</th><th>Pusės</th><th>Egzaminas</th><th>Testas</th></tr></thead><tbody>${rv.table.map(r => `<tr><td>${r.name}${r.name === S.strategy ? ' ★' : ''}</td><td>${r.n}</td><td>${Math.round(r.win * 100)} %</td><td>${r.pf == null ? '∞' : r.pf.toFixed(2)}</td><td class="${cls(r.total)}">${fmtSE(r.total)}</td><td>${fmtSE(r.h1)} / ${fmtSE(r.h2)}</td><td class="${r.exam == null ? '' : cls(r.exam)}">${r.exam == null ? '–' : fmtSE(r.exam)}</td><td>${r.ok ? '✅' : r.train_ok ? '🟡' : '—'}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 // ================= calendar =================
