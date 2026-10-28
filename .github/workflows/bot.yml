@@ -30,8 +30,17 @@ jobs:
           cache: pip
       - name: Įdiegti priedus
         run: pip install -r requirements.txt
+      - name: Istorijos kešas
+        if: github.event.schedule == '17 9 * * 6' || inputs.review
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: mes-history-${{ github.run_id }}
+          restore-keys: mes-history-
       - name: Savaitės apžvalga
         if: github.event.schedule == '17 9 * * 6' || inputs.review
+        env:
+          DATABENTO_API_KEY: ${{ secrets.DATABENTO_API_KEY }}
         run: python review.py
       - name: Boto žingsnis
         run: python run_once.py
