@@ -1,7 +1,7 @@
 {
- "day": "2026-10-28",
- "day_pnl": 78.51,
- "day_trades": 1,
+ "day": "2026-10-29",
+ "day_pnl": 0.0,
+ "day_trades": 0,
  "news_score": 0.0,
  "events": [
   "[10-28 09:45 ET] 📈 Analitikas: kaina per toli nuo vidurkio (15.95 pt) – turėtų grįžti",
@@ -19,5 +19,5 @@
   "day_open": null,
   "ret": null
  },
- "last_bar": "2026-10-28T20:45:00+00:00"
+ "last_bar": "2026-10-28T22:00:00+00:00"
 }

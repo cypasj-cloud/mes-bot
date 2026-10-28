@@ -1,9 +1,9 @@
 {
- "time": "2026-10-28T20:45:00+00:00",
- "price": 7760.75,
- "ema_fast": 7768.171905135258,
- "ema_slow": 7769.966607389475,
- "ema_trend": 7768.696012487632,
+ "time": "2026-10-28T22:00:00+00:00",
+ "price": 7755.25,
+ "ema_fast": 7765.587524108207,
+ "ema_slow": 7768.628733990432,
+ "ema_trend": 7768.168717880274,
  "position": null,
  "open_pnl": 0.0,
  "balance": 10078.51,
@@ -12,23 +12,19 @@
   "chart": 0.53
  },
  "news_score": 0.0,
- "day_pnl": 78.51,
+ "day_pnl": 0.0,
  "settings": "Grįžimas į vidurkį | 15min | z ≥ 3 | SL 10",
  "events": [
   "[10-28 09:45 ET] 📈 Analitikas: kaina per toli nuo vidurkio (15.95 pt) – turėtų grįžti",
   "[10-28 09:45 ET] 🐒 Treideris: PERKA 1 MES @ 7757.25 (grįžimas)",
   "[10-28 11:15 ET] ✅ Uždaryta LONG +78.51$ (grįžimas → tikslas)"
  ],
- "updated_at": "2026-10-28T21:38:40.841249+00:00",
+ "updated_at": "2026-10-28T22:20:25.989070+00:00",
  "market_open": false,
  "strategy": "Grįžimas z≥3 15min",
  "start_balance": 10000.0,
  "day_open": 7762.25,
  "bars": [
-  {
-   "t": "2026-10-28T01:00:00+00:00",
-   "c": 7757.25
-  },
   {
    "t": "2026-10-28T01:15:00+00:00",
    "c": 7758.75
@@ -344,6 +340,10 @@
   {
    "t": "2026-10-28T20:45:00+00:00",
    "c": 7760.75
+  },
+  {
+   "t": "2026-10-28T22:00:00+00:00",
+   "c": 7755.25
   }
  ],
  "trades": [
