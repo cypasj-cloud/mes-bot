@@ -1,23 +1,20 @@
 {
- "time": "2026-11-17T14:45:00+00:00",
- "price": 7429.25,
- "ema_fast": 7428.643799469521,
- "ema_slow": 7429.267840343895,
- "ema_trend": 7433.915557215099,
+ "time": "2026-11-17T15:45:00+00:00",
+ "price": 7353.25,
+ "ema_fast": 7396.234660262716,
+ "ema_slow": 7412.860216253414,
+ "ema_trend": 7425.824099170374,
  "position": null,
  "open_pnl": 0.0,
- "balance": 9851.41,
+ "balance": 9798.92,
  "weights": {
   "news": 0.5,
-  "chart": 0.32
+  "chart": 0.29
  },
  "news_score": 0.0,
- "day_pnl": 0.0,
+ "day_pnl": -52.49,
  "settings": "Grįžimas į vidurkį | 15min | z ≥ 3 | SL 10",
  "events": [
-  "[11-04 09:30 ET] 🐒 Treideris: PARDUODA 1 MES @ 7730.50 (grįžimas)",
-  "[11-04 11:45 ET] ❌ Uždaryta SHORT -52.49$ (grįžimas → stop-loss)",
-  "[11-05 09:30 ET] 📈 Analitikas: kaina per toli nuo vidurkio (100.88 pt) – turėtų grįžti",
   "[11-05 09:30 ET] 🐒 Treideris: PERKA 1 MES @ 7621.75 (grįžimas)",
   "[11-05 09:45 ET] ❌ Uždaryta LONG -52.49$ (grįžimas → stop-loss)",
   "[11-05 09:45 ET] 📈 Analitikas: kaina per toli nuo vidurkio (122.00 pt) – turėtų grįžti",
@@ -34,30 +31,17 @@
   "[11-09 09:45 ET] ❌ Uždaryta SHORT -52.49$ (grįžimas → stop-loss)",
   "[11-13 10:00 ET] 📈 Analitikas: kaina per toli nuo vidurkio (95.57 pt) – turėtų grįžti",
   "[11-13 10:00 ET] 🐒 Treideris: PERKA 1 MES @ 7531.25 (grįžimas)",
-  "[11-13 10:15 ET] ❌ Uždaryta LONG -52.49$ (grįžimas → stop-loss)"
+  "[11-13 10:15 ET] ❌ Uždaryta LONG -52.49$ (grįžimas → stop-loss)",
+  "[11-17 10:30 ET] 📈 Analitikas: kaina per toli nuo vidurkio (78.50 pt) – turėtų grįžti",
+  "[11-17 10:30 ET] 🐒 Treideris: PERKA 1 MES @ 7348.25 (grįžimas)",
+  "[11-17 10:45 ET] ❌ Uždaryta LONG -52.49$ (grįžimas → stop-loss)"
  ],
- "updated_at": "2026-11-17T15:09:33.063159+00:00",
+ "updated_at": "2026-11-17T16:09:33.950848+00:00",
  "market_open": true,
  "strategy": "Grįžimas z≥3 15min",
  "start_balance": 10000.0,
  "day_open": 7434.25,
  "bars": [
-  {
-   "t": "2026-11-16T18:00:00+00:00",
-   "c": 7463.25
-  },
-  {
-   "t": "2026-11-16T18:15:00+00:00",
-   "c": 7445.25
-  },
-  {
-   "t": "2026-11-16T18:30:00+00:00",
-   "c": 7439.25
-  },
-  {
-   "t": "2026-11-16T18:45:00+00:00",
-   "c": 7458.0
-  },
   {
    "t": "2026-11-16T19:00:00+00:00",
    "c": 7446.25
@@ -360,7 +344,23 @@
   },
   {
    "t": "2026-11-17T14:45:00+00:00",
-   "c": 7429.25
+   "c": 7432.25
+  },
+  {
+   "t": "2026-11-17T15:00:00+00:00",
+   "c": 7412.25
+  },
+  {
+   "t": "2026-11-17T15:15:00+00:00",
+   "c": 7405.25
+  },
+  {
+   "t": "2026-11-17T15:30:00+00:00",
+   "c": 7348.0
+  },
+  {
+   "t": "2026-11-17T15:45:00+00:00",
+   "c": 7353.25
   }
  ],
  "trades": [
@@ -453,6 +453,15 @@
    "exit": 7521.0,
    "pnl": -52.49,
    "reason": "grįžimas → stop-loss"
+  },
+  {
+   "open_time": "2026-11-17T15:45:00+00:00",
+   "close_time": "2026-11-17T15:45:00+00:00",
+   "dir": "LONG",
+   "entry": 7348.25,
+   "exit": 7338.0,
+   "pnl": -52.49,
+   "reason": "grįžimas → stop-loss"
   }
  ],
  "days": {
@@ -487,6 +496,10 @@
   "2026-11-13": {
    "pnl": -52.49,
    "n": 1
+  },
+  "2026-11-17": {
+   "pnl": -52.49,
+   "n": 1
   }
  },
  "equity": [
@@ -500,7 +513,8 @@
   10008.88,
   9956.39,
   9903.9,
-  9851.41
+  9851.41,
+  9798.92
  ],
  "review": {
   "at": "2026-11-14T09:59:04.154972+00:00",
