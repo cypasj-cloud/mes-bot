@@ -1,19 +1,8 @@
 {
-  "balance": 9798.9225,
-  "position": {
-    "dir": 1,
-    "entry": 7378.25,
-    "stop": 7368.25,
-    "target": 7421.8875,
-    "time": "2026-11-19T15:15:00+00:00",
-    "reason": "grįžimas",
-    "signals": {
-      "chart": 1,
-      "news": 0.0
-    }
-  },
+  "balance": 9641.452500000001,
+  "position": null,
   "weights": {
     "news": 0.5,
-    "chart": 0.29
+    "chart": 0.2
   }
 }
