@@ -1,8 +1,8 @@
 {
-  "balance": 9641.452500000001,
+  "balance": 9588.962500000001,
   "position": null,
   "weights": {
     "news": 0.5,
-    "chart": 0.2
+    "chart": 0.17
   }
 }
