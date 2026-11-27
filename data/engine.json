@@ -1,10 +1,9 @@
 {
- "day": "2026-11-26",
- "day_pnl": 0.0,
- "day_trades": 0,
+ "day": "2026-11-27",
+ "day_pnl": -52.49,
+ "day_trades": 1,
  "news_score": 0.0,
  "events": [
-  "[10-28 09:45 ET] 📈 Analitikas: kaina per toli nuo vidurkio (15.95 pt) – turėtų grįžti",
   "[10-28 09:45 ET] 🐒 Treideris: PERKA 1 MES @ 7757.25 (grįžimas)",
   "[10-28 11:15 ET] ✅ Uždaryta LONG +78.51$ (grįžimas → tikslas)",
   "[10-30 10:00 ET] 📈 Analitikas: kaina per toli nuo vidurkio (27.88 pt) – turėtų grįžti",
@@ -51,7 +50,10 @@
   "[11-23 10:15 ET] ❌ Uždaryta SHORT -52.49$ (grįžimas → stop-loss)",
   "[11-25 09:30 ET] 📈 Analitikas: kaina per toli nuo vidurkio (92.35 pt) – turėtų grįžti",
   "[11-25 09:30 ET] 🐒 Treideris: PERKA 1 MES @ 6991.00 (grįžimas)",
-  "[11-25 12:00 ET] ✅ Uždaryta LONG +460.51$ (grįžimas → tikslas)"
+  "[11-25 12:00 ET] ✅ Uždaryta LONG +460.51$ (grįžimas → tikslas)",
+  "[11-27 10:30 ET] 📈 Analitikas: kaina per toli nuo vidurkio (38.54 pt) – turėtų grįžti",
+  "[11-27 10:30 ET] 🐒 Treideris: PARDUODA 1 MES @ 7282.50 (grįžimas)",
+  "[11-27 10:45 ET] ❌ Uždaryta SHORT -52.49$ (grįžimas → stop-loss)"
  ],
  "orb": {
   "day": null,
@@ -64,5 +66,5 @@
   "day_open": null,
   "ret": null
  },
- "last_bar": "2026-11-26T04:45:00+00:00"
+ "last_bar": "2026-11-27T18:00:00+00:00"
 }
